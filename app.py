@@ -1,5 +1,7 @@
 
 from calcfun import do_addition, do_subtraction
+from area import calculate_area
+
 
 def main():
     print("Welcome to the calculator App")
@@ -7,6 +9,7 @@ def main():
           \nSelect the function from the following options:
           1. Add
           2. Subtract
+          3. Area
           """)
 
     user_input = input("Select the function: ")
@@ -16,6 +19,8 @@ def main():
 
     if user_input == "1":
         result = do_addition(a,b)
+    elif user_input == "3":
+        result = calculate_area(a,b)
     else:
         result = do_subtraction(a,b)
     
